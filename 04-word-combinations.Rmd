@@ -16,7 +16,7 @@ library(tidytext)
 library(janeaustenr)
 
 austen_bigrams <- austen_books() %>%
-  unnest_tokens(bigram, text, token = "ngrams", n = 2)
+  unnest_tokens(bigram, text, token = "ngrams", n = 2, collapse = TRUE)
 
 austen_bigrams
 ```
